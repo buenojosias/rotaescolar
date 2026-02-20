@@ -23,7 +23,38 @@
         }
     </style>
 </head>
-<body class="bg-off-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white font-lexend transition-colors duration-300">
+<body x-data="{ 
+    showScrollTop: false,
+    scrollTo(id) {
+        const target = id === 'top' ? document.documentElement : document.getElementById(id);
+        if (!target) return;
+        
+        const targetPosition = id === 'top' ? 0 : target.getBoundingClientRect().top + window.pageYOffset;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 1000;
+        let start = null;
+
+        const step = (timestamp) => {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const t = Math.min(progress / duration, 1);
+            
+            // Ease In Cubic: t * t * t (starts slow, accelerates)
+            const easeInCubic = t * t * t;
+            
+            window.scrollTo(0, startPosition + distance * easeInCubic);
+            
+            if (progress < duration) {
+                window.requestAnimationFrame(step);
+            }
+        };
+
+        window.requestAnimationFrame(step);
+    }
+}" 
+@scroll.window="showScrollTop = (window.pageYOffset > 400)"
+class="bg-off-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white font-lexend transition-colors duration-300">
     <header class="bg-brand-yellow hero-pattern dark:bg-bg-deep dark:bg-none px-6 lg:px-12 py-12 rounded-b-[3rem] relative overflow-hidden border-b border-gray-100 dark:border-white/5 min-h-screen flex flex-col">
         <!-- Navigation -->
         <nav class="w-full max-w-7xl mx-auto flex items-center justify-between z-20 mb-12">
@@ -57,11 +88,15 @@
                     Conectamos responsáveis e transportadores escolares em Curitiba e Região Metropolitana de forma rápida, segura e direta.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a class="bg-primary hover:bg-primary/90 text-white text-lg font-bold py-5 px-10 rounded-2xl flex items-center justify-center gap-3 shadow-xl transition-all hover:-translate-y-1 dark:bg-brand-yellow dark:text-bg-deep dark:hover:brightness-110" href="#responsaveis">
+                    <a class="bg-primary hover:bg-primary/90 text-white text-lg font-bold py-5 px-10 rounded-2xl flex items-center justify-center gap-3 shadow-xl transition-all hover:-translate-y-1 dark:bg-brand-yellow dark:text-bg-deep dark:hover:brightness-110" 
+                       href="#responsaveis"
+                       x-on:click.prevent="scrollTo('responsaveis')">
                         <span class="material-symbols-outlined">person</span>
                         Sou responsável
                     </a>
-                    <a class="bg-brand-green hover:bg-brand-green/90 text-white text-lg font-bold py-5 px-10 rounded-2xl flex items-center justify-center gap-3 shadow-xl transition-all hover:-translate-y-1 dark:bg-transparent dark:border-2 dark:border-brand-green dark:text-brand-green" href="#transportadores">
+                    <a class="bg-brand-green hover:bg-brand-green/90 text-white text-lg font-bold py-5 px-10 rounded-2xl flex items-center justify-center gap-3 shadow-xl transition-all hover:-translate-y-1 dark:bg-transparent dark:border-2 dark:border-brand-green dark:text-brand-green" 
+                       href="#transportadores"
+                       x-on:click.prevent="scrollTo('transportadores')">
                         <span class="material-symbols-outlined">airport_shuttle</span>
                         Sou transportador
                     </a>
@@ -231,5 +266,21 @@
             </div>
         </div>
     </footer>
+
+    <!-- Floating Back to Top Button -->
+    <button 
+        x-show="showScrollTop"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 translate-y-10 scale-90"
+        x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+        x-transition:leave-end="opacity-0 translate-y-10 scale-90"
+        x-on:click="scrollTo('top')"
+        class="fixed bottom-8 right-8 z-50 bg-brand-yellow text-bg-deep p-4 rounded-2xl shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center border-2 border-slate-900/10 dark:border-white/10 group"
+        aria-label="Voltar para o topo"
+    >
+        <span class="material-symbols-outlined font-bold group-hover:-translate-y-1 transition-transform">arrow_upward</span>
+    </button>
 </body>
 </html>
