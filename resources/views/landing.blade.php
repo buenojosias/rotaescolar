@@ -97,7 +97,7 @@
                     Conectamos responsáveis e transportadores escolares em Curitiba e Região Metropolitana de forma
                     rápida, segura e direta.
                 </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+                <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4 pt-4">
                     <a class="bg-primary hover:bg-primary/90 text-white text-lg font-bold py-5 px-8 rounded-2xl flex items-center justify-center gap-3 shadow-xl transition-all hover:-translate-y-1 dark:bg-brand-yellow dark:text-bg-deep dark:hover:brightness-110"
                         href="#responsaveis" x-on:click.prevent="scrollTo('responsaveis')">
                         <span class="material-symbols-outlined">person</span>
@@ -197,33 +197,34 @@
                                 <label
                                     class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Nome</label>
                                 <input
-                                    class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
+                                    class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-100 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
                                     placeholder="Seu nome" type="text">
                             </div>
                             <div>
                                 <label
                                     class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">WhatsApp</label>
                                 <input
-                                    class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
-                                    placeholder="(41) 99999-9999" type="tel">
+                                    class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-100 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
+                                    placeholder="(41) 99999-9999" type="tel"
+                                    x-mask:dynamic="$input.length > 14 ? '(99) 99999-9999' : '(99) 9999-9999'">
                             </div>
                         </div>
                         <div>
                             <label
                                 class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Escola</label>
                             <input
-                                class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
+                                class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-100 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
                                 placeholder="Nome da escola" type="text">
                         </div>
                         <div>
                             <label
                                 class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Bairro</label>
                             <input
-                                class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
+                                class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-100 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400"
                                 placeholder="Seu bairro" type="text">
                         </div>
                         <button
-                            class="w-full bg-brand-yellow text-bg-deep text-lg font-black py-5 rounded-2xl shadow-xl hover:brightness-110 hover:-translate-y-0.5 transition-all active:scale-[0.98] cursor-pointer"
+                            class="w-full bg-brand-yellow text-bg-deep text-lg font-black mt-1 py-4 rounded-2xl shadow-xl hover:brightness-110 hover:-translate-y-0.5 transition-all active:scale-[0.98] cursor-pointer"
                             type="submit">
                             Quero participar
                         </button>
@@ -297,7 +298,8 @@
                                     class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Telefone</label>
                                 <input
                                     class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow"
-                                    type="tel" placeholder="(41) 99999-9999">
+                                    type="tel" placeholder="(41) 99999-9999"
+                                    x-mask:dynamic="$input.length > 14 ? '(99) 99999-9999' : '(99) 9999-9999'">
                             </div>
                         </div>
                         <div class="grid sm:grid-cols-2 gap-4">
@@ -317,7 +319,7 @@
                             </div>
                         </div>
                         <button
-                            class="w-full bg-brand-yellow text-bg-deep text-lg font-black py-5 rounded-2xl shadow-xl hover:brightness-110 hover:-translate-y-0.5 transition-all active:scale-[0.98] cursor-pointer"
+                            class="w-full bg-brand-yellow text-bg-deep text-lg font-black mt-1 py-4 rounded-2xl shadow-xl hover:brightness-110 hover:-translate-y-0.5 transition-all active:scale-[0.98] cursor-pointer"
                             type="submit">
                             Quero cadastrar
                         </button>
@@ -362,7 +364,7 @@
                     </div>
                     <span class="font-black text-lg text-brand-yellow dark:text-off-white">Rota Escolar</span>
                 </div>
-                <p class="text-sm text-brand-yellow/60 dark:text-light-grey mb-2">© 2026 Rota Escolar. Todos os
+                <p class="text-sm text-light-grey mb-2">© 2026 Rota Escolar. Todos os
                     direitos reservados.</p>
                 <p class="text-xs font-semibold text-brand-yellow/80 uppercase tracking-widest">Projeto em fase de
                     lançamento</p>
