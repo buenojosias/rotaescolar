@@ -123,51 +123,64 @@ class="bg-off-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white font-
         </div>
     </header>
 
-    <section class="px-6 py-16 bg-off-white dark:bg-bg-section-1 min-h-screen flex items-center" id="responsaveis">
-        <div class="max-w-md mx-auto w-full">
-            <div class="mb-10">
-                <h2 class="text-2xl font-extrabold mb-6 flex items-center gap-2 text-gray-900 dark:text-off-white">
-                    <span class="material-symbols-outlined text-brand-yellow">search</span>
-                    Procurando transporte escolar?
-                </h2>
-                <ul class="space-y-4 mb-10">
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1 rounded-full text-sm">check</span>
-                        <span class="text-gray-600 dark:text-light-grey font-medium">Veja apenas transportadores compatíveis</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1 rounded-full text-sm">check</span>
-                        <span class="text-gray-600 dark:text-light-grey font-medium">Filtro por idade</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1 rounded-full text-sm">check</span>
-                        <span class="text-gray-600 dark:text-light-grey font-medium">Busca por proximidade</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1 rounded-full text-sm">check</span>
-                        <span class="text-gray-600 dark:text-light-grey font-medium">Contato via WhatsApp</span>
-                    </li>
-                </ul>
-                <div class="bg-white dark:bg-bg-deep p-6 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm">
-                    <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-off-white">Interessado? Deixe seu contato</h3>
-                    <form class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">Nome</label>
-                            <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400 dark:placeholder-white/20" placeholder="Seu nome" type="text">
+    <section class="px-6 py-24 bg-off-white dark:bg-bg-section-1 min-h-screen flex items-center" id="responsaveis">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <!-- Text Column -->
+                <div class="space-y-8">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold flex items-center gap-3 text-gray-900 dark:text-off-white">
+                        <span class="material-symbols-outlined text-brand-yellow text-4xl">search</span>
+                        Procurando transporte escolar?
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-light-grey font-medium leading-relaxed max-w-xl">
+                        Encontre os melhores transportadores que atendem especificamente a escola dos seus filhos e a sua região.
+                    </p>
+                    <ul class="grid sm:grid-cols-2 gap-6">
+                        <li class="flex items-start gap-3 bg-white dark:bg-bg-deep p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1.5 rounded-full text-sm">check</span>
+                            <span class="text-gray-700 dark:text-light-grey font-semibold">Apenas compatíveis</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white dark:bg-bg-deep p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1.5 rounded-full text-sm">check</span>
+                            <span class="text-gray-700 dark:text-light-grey font-semibold">Filtro por idade</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white dark:bg-bg-deep p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1.5 rounded-full text-sm">check</span>
+                            <span class="text-gray-700 dark:text-light-grey font-semibold">Busca por proximidade</span>
+                        </li>
+                        <li class="flex items-start gap-3 bg-white dark:bg-bg-deep p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow bg-brand-yellow/10 p-1.5 rounded-full text-sm">check</span>
+                            <span class="text-gray-700 dark:text-light-grey font-semibold">Contato via WhatsApp</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Form Column -->
+                <div class="bg-white dark:bg-bg-deep p-8 lg:p-10 rounded-[2.5rem] border border-gray-200 dark:border-white/10 shadow-2xl relative">
+                    <div class="absolute -top-4 -right-4 bg-brand-yellow text-bg-deep px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+                        Rápido e Direto
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-off-white">Interessado? Deixe seu contato</h3>
+                    <form class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Nome</label>
+                                <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400" placeholder="Seu nome" type="text">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">WhatsApp</label>
+                                <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400" placeholder="(41) 99999-9999" type="tel">
+                            </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">WhatsApp</label>
-                            <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400 dark:placeholder-white/20" placeholder="(41) 99999-9999" type="tel">
+                            <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Escola</label>
+                            <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400" placeholder="Nome da escola" type="text">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">Escola</label>
-                            <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400 dark:placeholder-white/20" placeholder="Nome da escola" type="text">
+                            <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Bairro</label>
+                            <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400" placeholder="Seu bairro" type="text">
                         </div>
-                        <div>
-                            <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">Bairro</label>
-                            <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow placeholder-gray-400 dark:placeholder-white/20" placeholder="Seu bairro" type="text">
-                        </div>
-                        <button class="w-full bg-brand-yellow text-bg-deep font-extrabold py-4 rounded-xl shadow-md hover:brightness-110 transition-all" type="submit">
+                        <button class="w-full bg-brand-yellow text-bg-deep text-lg font-black py-5 rounded-2xl shadow-xl hover:brightness-110 hover:-translate-y-0.5 transition-all active:scale-[0.98]" type="submit">
                             Quero participar
                         </button>
                     </form>
@@ -176,52 +189,69 @@ class="bg-off-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white font-
         </div>
     </section>
 
-    <section class="px-6 py-16 bg-white dark:bg-bg-section-2 min-h-screen flex items-center" id="transportadores">
-        <div class="max-w-md mx-auto w-full">
-            <h2 class="text-2xl font-extrabold mb-6 leading-tight text-gray-900 dark:text-off-white">
-                Receba contatos apenas dentro da sua cobertura.
-            </h2>
-            <div class="grid grid-cols-2 gap-4 mb-10">
-                <div class="bg-off-white dark:bg-bg-section-1 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
-                    <span class="material-symbols-outlined text-brand-yellow mb-2">payments</span>
-                    <p class="font-bold text-sm text-gray-900 dark:text-off-white">Cadastro gratuito</p>
-                </div>
-                <div class="bg-off-white dark:bg-bg-section-1 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
-                    <span class="material-symbols-outlined text-brand-yellow mb-2">map</span>
-                    <p class="font-bold text-sm text-gray-900 dark:text-off-white">Controle de área</p>
-                </div>
-                <div class="bg-off-white dark:bg-bg-section-1 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
-                    <span class="material-symbols-outlined text-brand-yellow mb-2">chat</span>
-                    <p class="font-bold text-sm text-gray-900 dark:text-off-white">Contato direto</p>
-                </div>
-                <div class="bg-off-white dark:bg-bg-section-1 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-white/5">
-                    <span class="material-symbols-outlined text-brand-yellow mb-2">handshake</span>
-                    <p class="font-bold text-sm text-gray-900 dark:text-off-white">Sem intermediação</p>
-                </div>
-            </div>
-            <div class="bg-white dark:bg-bg-deep p-6 rounded-2xl shadow-sm border border-gray-200 dark:border-white/10">
-                <h3 class="text-lg font-bold mb-4 text-gray-900 dark:text-off-white">Cadastro de Transportador</h3>
-                <form class="space-y-4">
-                    <div>
-                        <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">Nome</label>
-                        <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" type="text" placeholder="Seu nome">
+    <section class="px-6 py-24 bg-white dark:bg-bg-section-2 min-h-screen flex items-center" id="transportadores">
+        <div class="max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <!-- Text Column -->
+                <div class="space-y-8 lg:order-1">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold leading-tight text-gray-900 dark:text-off-white">
+                        Receba contatos apenas dentro da sua cobertura.
+                    </h2>
+                    <p class="text-xl text-gray-600 dark:text-light-grey font-medium leading-relaxed max-w-xl">
+                        Otimize sua rota e aumente seu faturamento recebendo interessados que já estão no seu trajeto diário.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-off-white dark:bg-bg-section-1 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow mb-3 text-3xl">payments</span>
+                            <p class="font-bold text-gray-900 dark:text-off-white">Cadastro gratuito</p>
+                        </div>
+                        <div class="bg-off-white dark:bg-bg-section-1 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow mb-3 text-3xl">map</span>
+                            <p class="font-bold text-gray-900 dark:text-off-white">Controle de área</p>
+                        </div>
+                        <div class="bg-off-white dark:bg-bg-section-1 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow mb-3 text-3xl">chat</span>
+                            <p class="font-bold text-gray-900 dark:text-off-white">Contato direto</p>
+                        </div>
+                        <div class="bg-off-white dark:bg-bg-section-1 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-white/5">
+                            <span class="material-symbols-outlined text-brand-yellow mb-3 text-3xl">handshake</span>
+                            <p class="font-bold text-gray-900 dark:text-off-white">Sem intermediação</p>
+                        </div>
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">Telefone</label>
-                        <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" type="tel" placeholder="(41) 99999-9999">
+                </div>
+
+                <!-- Form Column -->
+                <div class="bg-off-white dark:bg-bg-deep p-8 lg:p-10 rounded-[2.5rem] shadow-2xl border border-gray-200 dark:border-white/10 relative lg:order-2">
+                    <div class="absolute -top-4 -left-4 bg-brand-green text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">
+                        Exclusivo Curitiba
                     </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">Cidade</label>
-                        <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" placeholder="Curitiba ou região" type="text">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-1 text-gray-600 dark:text-light-grey">Nº Veículos</label>
-                        <input class="w-full p-3 rounded-lg border-gray-200 dark:border-white/20 bg-slate-50 dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" type="number" placeholder="1">
-                    </div>
-                    <button class="w-full bg-brand-yellow text-bg-deep font-extrabold py-4 rounded-xl hover:brightness-110 transition-all" type="submit">
-                        Quero cadastrar
-                    </button>
-                </form>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-off-white">Cadastro de Transportador</h3>
+                    <form class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Nome</label>
+                                <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" type="text" placeholder="Seu nome">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Telefone</label>
+                                <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" type="tel" placeholder="(41) 99999-9999">
+                            </div>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Cidade</label>
+                                <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" placeholder="Curitiba ou região" type="text">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold mb-2 text-gray-600 dark:text-light-grey">Nº Veículos</label>
+                                <input class="w-full p-4 rounded-xl border-gray-200 dark:border-white/20 bg-white dark:bg-bg-section-1 text-gray-900 dark:text-off-white focus:ring-brand-yellow focus:border-brand-yellow" type="number" placeholder="1">
+                            </div>
+                        </div>
+                        <button class="w-full bg-brand-yellow text-bg-deep text-lg font-black py-5 rounded-2xl shadow-xl hover:brightness-110 hover:-translate-y-0.5 transition-all active:scale-[0.98]" type="submit">
+                            Quero cadastrar
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
